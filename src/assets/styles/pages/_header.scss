@@ -39,53 +39,70 @@
         :hover {
           color: var(--text-muted);
         }
+
+        &:last-child {
+          &:hover {
+            div.dropdownwrapper-outerbox {
+              @include toggleVisibility(visible, 1);
+            }
+          }
+        }
+
+        position: relative;
       }
-
-      .dropdownwrapper {
-        border: 1px solid var(--text-color);
-        background-color: var(--black-color);
+      .dropdownwrapper-outerbox {
         position: absolute;
-        color: var(--text-color);
-        top: 50px;
+        border-top: 30px solid transparent;
+        top: 30px;
         right: 0;
-        border-radius: 3px;
-        padding: 15px;
-
-        .dividerline {
-          border: 1px solid var(--text-color);
-          margin: 0.5rem 0 0.5rem 0;
-        }
-
-        p {
-          font-size: 16px;
-          margin: 0.5rem 0 0.5rem 0;
-        }
-        button {
+        @include toggleVisibility(hidden, 0);
+        .dropdownwrapper {
+          border: 2px solid var(--text-color);
           background-color: var(--black-color);
-          border: 1px solid var(--text-color);
-          color: var(--text-color);
-          padding: 10px;
-          font-size: 16px;
-        }
 
-        ul {
-          display: flex;
-          flex-direction: column;
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-
-          font-size: 16px;
-        }
-        li {
-          margin: 0;
-        }
-        li a {
           color: var(--text-color);
-          cursor: pointer;
-          text-decoration: none;
-          :hover {
-            color: var(--text-muted);
+
+          border-radius: 3px;
+          padding: 15px;
+          min-width: 16rem;
+          outline: 30px solid transparent;
+
+          .dividerline {
+            border: 1px solid var(--text-color);
+            margin: 0.5rem 0 0.5rem 0;
+          }
+
+          p {
+            font-size: 16px;
+            margin: 0.5rem 0 0.5rem 0;
+          }
+          button {
+            background-color: var(--black-color);
+            border: 1px solid var(--text-color);
+            color: var(--text-color);
+            padding: 10px;
+            font-size: 16px;
+          }
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            font-size: 16px;
+          }
+          li {
+            margin: 0;
+          }
+          li a {
+            color: var(--text-color);
+            cursor: pointer;
+            text-decoration: none;
+            :hover {
+              color: var(--text-muted);
+            }
           }
         }
       }

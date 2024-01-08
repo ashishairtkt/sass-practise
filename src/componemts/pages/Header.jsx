@@ -43,26 +43,28 @@ export default function Header() {
               </li>
               <li>
                 <AiOutlineUser />
-                <div className="dropdownwrapper">
-                  <p>Access account and manage orders</p>
+                <div className="dropdownwrapper-outerbox">
+                  <div className="dropdownwrapper">
+                    <p>Access account and manage orders</p>
 
-                  <div className="dividerline"></div>
+                    <div className="dividerline"></div>
 
-                  {!formUserInfo && (
-                    <button
-                      type="button"
-                      // onClick={() => toggleForm(true)}
-                    >
-                      Login / Signup
-                    </button>
-                  )}
-                  <ul>
-                    {isdropdownMenu.map((item) => (
-                      <li key={item.id}>
-                        <Link to={item.path}>{item.link}</Link>
-                      </li>
-                    ))}
-                  </ul>
+                    {!formUserInfo && (
+                      <button
+                        type="button"
+                        // onClick={() => toggleForm(true)}
+                      >
+                        Login / Signup
+                      </button>
+                    )}
+                    <ul>
+                      {isdropdownMenu.map((item) => (
+                        <li key={item.id}>
+                          <Link to={item.path}>{item.link}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </li>
             </ul>

@@ -39,6 +39,12 @@
 @mixin transition($prop: all, $duration, $timingFn: ease) {
   transition: $prop $duration $timingFn;
 }
+
+@mixin toggleVisibility($visibility, $opacity) {
+  visibility: $visibility;
+  opacity: $opacity;
+}
+
 // mixin for media-queries
 
 @mixin devices($breakpoint) {

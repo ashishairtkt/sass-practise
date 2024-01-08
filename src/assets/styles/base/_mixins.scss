@@ -1,12 +1,66 @@
 @mixin button($bg-color, $text-color) {
-    background-color: $bg-color;
-    color: $text-color;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: 1px solid darken($bg-color, 10%);
-    font-size: 16px;
-    
-    &:hover {
-      background-color: lighten($bg-color, 10%);
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid darken($bg-color, 10%);
+  font-size: 16px;
+
+  &:hover {
+    background-color: lighten($bg-color, 10%);
+  }
+}
+
+@mixin mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin margin-x($marginLeft, $marginRight) {
+  margin-left: $marginLeft;
+  margin-right: $marginRight;
+}
+
+@mixin margin-y($marginTop, $marginBottom) {
+  margin-top: $marginTop;
+  margin-bottom: $marginBottom;
+}
+
+@mixin padding-x($paddingLeft, $paddingRight) {
+  padding-left: $paddingLeft;
+  padding-right: $paddingRight;
+}
+
+@mixin padding-y($paddingTop, $paddingBottom) {
+  padding-top: $paddingTop;
+  padding-bottom: $paddingBottom;
+}
+
+@mixin transition($prop: all, $duration, $timingFn: ease) {
+  transition: $prop $duration $timingFn;
+}
+// mixin for media-queries
+
+@mixin devices($breakpoint) {
+  @if $breakpoint==xl {
+    @media (max-width: 1399.98px) {
+      @content;
+    }
+  } @else if $breakpoint==lg {
+    @media (max-width: 1023.98px) {
+      @content;
+    }
+  } @else if $breakpoint==md {
+    @media (max-width: 767.98px) {
+      @content;
+    }
+  } @else if $breakpoint==sm {
+    @media (max-width: 639.98px) {
+      @content;
+    }
+  } @else if $breakpoint==xs {
+    @media (max-width: 479.98px) {
+      @content;
     }
   }
+}

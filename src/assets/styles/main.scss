@@ -1,18 +1,10 @@
 // Base
 
-@import './base/variables.scss';
-@import './base/mixins.scss';
-
-
-
+@import "./base/variables.scss";
+@import "./base/mixins.scss";
+@import "./base/common";
 // Components
 
+// Pages
 
-
-
-
-// Pages 
-
-@import './base/header.scss';
-
-
+@import "./pages//header.scss";

@@ -1,0 +1,94 @@
+.header {
+  color: var(--text-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+
+  @include transition(background-color, 0.2s, linear);
+
+  &.sticky {
+    background-color: var(--black-color);
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+
+    .logo {
+      a {
+        font-size: 26px;
+        font-weight: 550;
+        color: var(--text-color);
+        text-decoration: none;
+      }
+    }
+
+    .user_actions {
+      ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0.8rem;
+      }
+      li {
+        @include margin-x(0.8rem, 0.8rem);
+        cursor: pointer;
+        :hover {
+          color: var(--text-muted);
+        }
+      }
+
+      .dropdownwrapper {
+        border: 1px solid var(--text-color);
+        background-color: var(--black-color);
+        position: absolute;
+        color: var(--text-color);
+        top: 50px;
+        right: 0;
+        border-radius: 3px;
+        padding: 15px;
+
+        .dividerline {
+          border: 1px solid var(--text-color);
+          margin: 0.5rem 0 0.5rem 0;
+        }
+
+        p {
+          font-size: 16px;
+          margin: 0.5rem 0 0.5rem 0;
+        }
+        button {
+          background-color: var(--black-color);
+          border: 1px solid var(--text-color);
+          color: var(--text-color);
+          padding: 10px;
+          font-size: 16px;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+
+          font-size: 16px;
+        }
+        li {
+          margin: 0;
+        }
+        li a {
+          color: var(--text-color);
+          cursor: pointer;
+          text-decoration: none;
+          :hover {
+            color: var(--text-muted);
+          }
+        }
+      }
+    }
+  }
+}

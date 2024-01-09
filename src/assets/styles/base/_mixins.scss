@@ -44,6 +44,14 @@
   visibility: $visibility;
   opacity: $opacity;
 }
+@mixin bordered($borderWidth, $borderColor) {
+  border: $borderWidth solid $borderColor;
+}
+
+@mixin dimension($width: auto, $height: auto) {
+  width: $width;
+  height: $height;
+}
 
 // mixin for media-queries
 

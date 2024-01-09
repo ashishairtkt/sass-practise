@@ -36,8 +36,16 @@
       li {
         @include margin-x(0.8rem, 0.8rem);
         cursor: pointer;
-        :hover {
+
+        .tooltip {
+          @include toggleVisibility(hidden, 0);
+        }
+        &:hover {
           color: var(--text-muted);
+
+          .tooltip {
+            @include toggleVisibility(visible, 1);
+          }
         }
 
         &:last-child {

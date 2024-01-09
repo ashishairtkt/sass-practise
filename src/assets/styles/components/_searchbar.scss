@@ -1,0 +1,22 @@
+#seachbar {
+  display: grid;
+  grid-template-columns: 0.5fr;
+  justify-content: center;
+  align-items: start;
+
+  @include devices(lg) {
+    grid-template-columns: 0.8fr;
+  }
+
+  @include devices(sm) {
+    grid-template-columns: 1fr;
+  }
+
+  .searchbar-box {
+    margin: 3rem 1rem;
+
+    .input_field {
+      background-color: var(--bg-color);
+    }
+  }
+}

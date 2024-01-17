@@ -1,0 +1,25 @@
+.hero_card {
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  background-color: var(--bg-color-2);
+
+  .hero_item_txt {
+    color: var(--text-color);
+
+    .btn {
+      background-color: var(--main-color);
+      padding: 10px;
+      text-decoration: none;
+      color: white;
+      border-radius: 0.5rem;
+    }
+  }
+
+  .hero_item_img {
+    border: 1px solid var(--text-color);
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -34,7 +34,7 @@
         margin: 0.8rem;
       }
       li {
-        @include margin-x(0.8rem, 0.8rem);
+        @include margin-x(1.5rem, 1.5rem);
         cursor: pointer;
 
         .tooltip {
